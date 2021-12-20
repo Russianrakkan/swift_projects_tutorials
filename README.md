@@ -1,2 +1,2 @@
 # swift_projects_tutorials
-swift tutorial projects
+Some of the projects, created in order to pratcise
