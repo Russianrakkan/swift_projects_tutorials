@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="br6-xb-8uF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Emoji Tab Table View Controller-->
+        <scene sceneID="Ns3-g6-vj1">
+            <objects>
+                <tableViewController id="cHM-Up-6E6" customClass="EmojiTabTableViewController" customModule="EmojiReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="XS0-ZJ-DAf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emojiCell" rowHeight="56" id="FJS-lr-biO" customClass="EmojiTableViewCell" customModule="EmojiReader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="56"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FJS-lr-biO" id="cBn-H6-PYp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uuk-lS-4qX">
+                                            <rect key="frame" x="16" y="8" width="382" height="40"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="😁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnm-UH-9ER">
+                                                    <rect key="frame" x="0.0" y="0.0" width="23" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FgH-Nq-gia">
+                                                    <rect key="frame" x="33" y="0.0" width="349" height="40"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHT-uv-r7O">
+                                                            <rect key="frame" x="0.0" y="0.0" width="349" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep smiling everyday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36F-vb-hR5">
+                                                            <rect key="frame" x="0.0" y="20" width="349" height="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Uuk-lS-4qX" secondAttribute="bottom" constant="8" id="8WQ-sr-oMP"/>
+                                        <constraint firstItem="Uuk-lS-4qX" firstAttribute="top" secondItem="cBn-H6-PYp" secondAttribute="top" constant="8" id="M6e-yV-BUJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Uuk-lS-4qX" secondAttribute="trailing" constant="16" id="ZH4-oW-YSW"/>
+                                        <constraint firstItem="Uuk-lS-4qX" firstAttribute="leading" secondItem="cBn-H6-PYp" secondAttribute="leading" constant="16" id="is6-DV-55M"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="36F-vb-hR5" id="FKO-9L-wKG"/>
+                                    <outlet property="emojiLabel" destination="Xnm-UH-9ER" id="a8U-KM-Ge1"/>
+                                    <outlet property="nameLabel" destination="BHT-uv-r7O" id="W8y-aa-X0y"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="cHM-Up-6E6" id="LT5-r5-Mo9"/>
+                            <outlet property="delegate" destination="cHM-Up-6E6" id="XSe-bh-MeP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Xbs-By-9ka"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3oE-he-o2w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.50724637681162" y="173.4375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xhy-bH-jZP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="br6-xb-8uF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8r8-4f-1wI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cHM-Up-6E6" kind="relationship" relationship="rootViewController" id="GiF-u2-bAD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fy-KC-XEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24.637681159420293" y="173.4375"/>
+        </scene>
+    </scenes>
+</document>
